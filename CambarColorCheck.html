@@ -1,0 +1,38 @@
+
+<html>
+<head>
+<script>
+var seleccionado=new Array()
+function cambia(fila){
+if(seleccionado[fila]!=true)
+	{
+	document.getElementById("fila"+fila).style.background='#3399FF';
+	document.getElementById("fila"+fila).style.color='#FFFFFF';
+	seleccionado[fila]=true;
+	}
+else
+	{
+	document.getElementById("fila"+fila).style.background='#66CCFF';
+	document.getElementById("fila"+fila).style.color='#000000';
+	seleccionado[fila]=false;
+	}	
+}
+</script>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#66CCFF" id="fila1"><input type="checkbox" onClick="cambia(1)">Primera fila</td>
+  </tr>
+  <tr>
+    <td bgcolor="#66CCFF" id="fila2"><input type="checkbox" onClick="cambia(2)">Segunda fila</td>
+  </tr>
+  <tr>
+    <td bgcolor="#66CCFF" id="fila3"><input type="checkbox" onClick="cambia(3)">Tercera fila</td>
+  </tr>
+  <tr>
+    <td bgcolor="#66CCFF" id="fila4"><input type="checkbox" onClick="cambia(4)">Cuarta fila</td>
+  </tr>
+</table>
+</body>
+</html>

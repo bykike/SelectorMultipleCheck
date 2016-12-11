@@ -1,0 +1,54 @@
+<html>
+<head>
+<script>
+function marcar() {
+    obj=arguments[0];
+    for(i=1;i<arguments.length;i++)
+	{
+	marca=arguments[i].replace('fila','');
+	marca='c'+marca;
+    if (obj.checked){
+	document.getElementById(arguments[i]).style.backgroundColor='#6699FF';
+	document.getElementById(marca).checked=true;
+	}
+    else{
+	document.getElementById(arguments[i]).style.backgroundColor='#66CCFF';
+	document.getElementById(marca).checked=false;
+	document.getElementById('cTodos').checked=false;
+	}
+	}
+}
+</script>
+</head>
+
+<body>
+<table>
+  <tr bgcolor="#66CCFF" id="fila1"> 
+    <td>T&iacute;tulo 1</td>
+    <td>Remitente 1</td>
+    <td> 
+      <input id="c1" type="checkbox" onClick="marcar(this,'fila1')">
+    </td>
+  </tr>
+  <tr bgcolor="#66CCFF" id="fila2"> 
+    <td>T&iacute;tulo 2</td>
+    <td>Remitente 2</td>
+    <td> 
+      <input id="c2"  type="checkbox" onClick="marcar(this,'fila2')">
+    </td>
+  </tr>
+  <tr bgcolor="#66CCFF" id="fila3"> 
+    <td>T&iacute;tulo 3</td>
+    <td>Remitente 3</td>
+    <td> 
+      <input id="c3"  type="checkbox" onClick="marcar(this,'fila3')">
+    </td>
+  </tr>
+</table>
+<input type="checkbox" onClick="marcar(this,'fila1','fila3')">
+Marcar mensajes 1 y 3<br>
+<input id="cTodos" name="checkbox" type="checkbox" onClick="marcar(this,'fila1','fila2','fila3')">
+Marcar todos los mensajes 
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <script language="JavaScript">
+            var CACT="#FF0000";
+            var CDES="#C0C0C0";
+            function A(e)
+            {
+            var ind=e.id.substring(1,e.id.length);
+            var C=CACT;
+            if(!e.checked)
+             {
+             C=CDES;
+             if(ind%2) {C="#E6E6E6";}
+             }
+            var fila="f"+ind;
+            document.getElementById(fila).style.backgroundColor=C;
+            }
+        </script>
+    </head>
+    
+    <body>
+    <table border="1" width="100%">
+        <script>
+            var FILAS=10;
+            var EVENTO="onClick='A(this);'";
+            var COLOR;
+            for(var q=0;q<FILAS;q++)
+             {
+             COLOR="#C0C0C0";
+             if(q%2) {COLOR="#E6E6E6";}
+             document.write("<tr id='f"+q+"' style='background-color:"+COLOR+";'><td>");
+             document.write("<input type='checkbox' id='c"+q+"' "+EVENTO+">");
+             document.write("Fila "+q+"</td>");
+             document.write("<td>Dato "+q+",1</td><td>Dato "+q+",2</td></tr>");
+             }
+        </script>
+    </table>
+    </body>
+</html>
