@@ -5,9 +5,9 @@
 </script>
 </head>
 <body>
-    
+
 <?php
-// array con datos como ejemplo: los datos se toman de una tabla de base de datos
+// El array con datos como ejemplo: los datos se toman de una tabla de base de datos
 $data = array(1=>'Pedro', 2=>'José', 4=>'Leonardo',5=>'Juana',6=>'Valeria');
 
 // Muestra el dato seleccionado
@@ -30,11 +30,11 @@ if(isset($_POST['Bok'])){
     <label> <!-- el label es para que tome click sobre la palabra, además de sobre el control -->
         <input type="checkbox" name="usuario[]" value="<?=$k?>" /> <?=$v?> <br />
     </label>
-<?php   
+<?php
     } // foreach
 ?>
     <input type="submit" value="Enviar" name="Bok" />
 </form>
-    
+
 </body>
 </html>
